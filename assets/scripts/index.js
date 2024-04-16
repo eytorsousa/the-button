@@ -95,83 +95,7 @@ function buttonContinue() {
 
 
 /* ---------------------------------------- Dark Mode ----------------------------------------*/
-mode.addEventListener("click", () => {
-    const darkModeOn = mode.classList.contains("dark-mode");
-    const darkModeBg2 = bg2.classList.contains("dark-bg2");
-    const darkSettings = settings.classList.contains("dark-settings");
-    const darkItens = itens.classList.contains("dark-itens");
-    const darkLabel = label.classList.contains("dark-label");
-    const darkInputs = inputs.classList.contains("dark-inputs");
-    const darkBack = back.classList.contains("dark-back");
 
-    mode.disabled = true;
-
-    body.classList.toggle("dark-body");
-    max.classList.toggle("dark-max");
-    resets.classList.toggle("dark-resets"); 
-    credits.classList.toggle("dark-credits");
-    link.classList.toggle("dark-link");
-    
-    mode.classList.add("dark-mode");
-    mode.classList.remove("light-mode");
-
-    bg2.classList.add("dark-bg2");
-    bg2.classList.remove("light-bg2");
-
-    settings.classList.add("dark-settings");
-    settings.classList.remove("light-settings");
-
-    itens.classList.add("dark-itens");
-    itens.classList.remove("light-itens");
-
-    label.classList.add("dark-label");
-    label.classList.remove("light-label");
-
-    inputs.classList.add("dark-inputs");
-    inputs.classList.remove("light-inputs");
-
-    back.classList.add("dark-back");
-    back.classList.remove("light-back");
-    
-    if(darkModeBg2) {
-        bg2.classList.remove("dark-bg2");
-        bg2.classList.add("light-bg2");
-    }
-
-    if(darkModeOn){
-        mode.classList.add("light-mode");
-        mode.classList.remove("dark-mode");
-    }
-
-    if(darkSettings){
-        settings.classList.add("light-settings");
-        settings.classList.remove("dark-settings");
-    }
-
-    if(darkItens){
-        itens.classList.add("light-itens");
-        itens.classList.remove("dark-itens");
-    }
-
-    if(darkLabel){
-        label.classList.add("light-label");
-        label.classList.remove("dark-label");
-    }
-
-    if(darkInputs){
-        inputs.classList.add("light-inputs");
-        inputs.classList.remove("dark-inputs");
-    }
-
-    if(darkBack){
-        back.classList.add("light-back");
-        back.classList.remove("dark-back");
-    }
-
-    setTimeout(function(){
-        mode.disabled = false;
-    }, 250);
-});
 
 /* ---------------------------------------- Settings ----------------------------------------*/
 const settings = document.querySelector(".settings");
@@ -195,27 +119,33 @@ function closeMenu(){
 }
 
 /* ---------------------------------------- Cores do Botão ----------------------------------------*/
-const red = document.querySelector("#red");
-const green = document.querySelector("#green");
-const brown = document.querySelector("#brown");
-const purple = document.querySelector("#purple");
 
-red.addEventListener("click", () => {
-    button.style.backgroundColor = '#FF494B';
-    bg1.style.backgroundColor = '#9a2f30';
-});
+const colors = Array.from(document.querySelectorAll(".color"));
 
-green.addEventListener("click", () => {
-    button.style.background = '#A1E4C6';
-    bg1.style.backgroundColor = '#74bda4';
-});
+console.log(colors);
 
-brown.addEventListener("click", () => {
-    button.style.background = '#461e29';
-    bg1.style.backgroundColor = '#230f14';
-});
+const presets = [
+    {
+        c1 : '#FF494B',
+        c2 : '#9a2f30'
+    },
+    {
+        c1: '#A1E4C6',
+        c2 : '#74bda4'
+    },
+    {
+        c1: '#461e29',
+        c2: '#230f14'
+    },
+    {
+        c1: '#aa7dfc',
+        c2: '#8a66c5'
+    }
+];
 
-purple.addEventListener("click", () => {
-    button.style.backgroundColor = '#aa7dfc';
-    bg1.style.backgroundColor = '#8a66c5';
-});
+for(let i = 0; i < colors.length; i++){
+    colors[i].addEventListener("click", ()=> {
+        button.style.backgroundColor = `${presets[i].c1}`;
+        bg1.style.backgroundColor = `${presets[i].c2}`;
+    });
+}
