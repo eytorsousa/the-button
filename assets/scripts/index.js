@@ -1,17 +1,17 @@
-const max = document.getElementById("max");
-const resets = document.getElementById("resets");
-const button = document.getElementById("button");
-const number = document.getElementById("number");
+const max = document.querySelector(".max");
+const resets = document.querySelector(".resets");
+const button = document.querySelector(".button");
+const number = document.querySelector(".number");
 
 const audio = new Audio('assets/media/click.mp3');
 const audio2 = new Audio('assets/media/reset.mp3');
 
-const body = document.getElementById("body");
-const bg2 = document.getElementById("bg2");
-const bg1 = document.getElementById("bg1");
-const mode = document.getElementById("mode");
-const credits = document.getElementById("credits");
-const link = document.getElementById("link");
+const body = document.querySelector("body");
+const bg2 = document.querySelector(".bg2");
+const bg1 = document.querySelector(".bg1");
+const mode = document.querySelector(".mode");
+const credits = document.querySelector("#credits");
+const link = document.querySelector("#link");
 
 var click = 0, resetChance = 0, resetsValue = 0, maxValue = 0, flag = 0;
 var randomChance = Math.floor(Math.random() * 101);
@@ -174,9 +174,9 @@ mode.addEventListener("click", () => {
 });
 
 /* ---------------------------------------- Settings ----------------------------------------*/
-const settings = document.getElementById("settings");
-const back = document.getElementById("back");
-const menu = document.getElementById("menu");
+const settings = document.querySelector(".settings");
+const back = document.querySelector(".back");
+const menu = document.querySelector(".menu");
 const itens = document.getElementById("itens");
 const label = document.getElementById("label");
 const inputs = document.getElementById("inputs");

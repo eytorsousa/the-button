@@ -26,7 +26,7 @@ body {
     background: #252425;
 }
 
-#max, #resets {
+.max, .resets {
     width: fit-content;
     margin: 50px auto 0px auto;
     font-weight: 700;
@@ -34,7 +34,7 @@ body {
     transition: 150ms ease-in-out;
 }
 
-#resets {
+.resets {
     font-size: 38px;
     margin-top: 20px;
 }
@@ -43,7 +43,7 @@ body {
     color: #f5f3e4;
 }
 
-#all {
+.all {
     width: fit-content;
     margin: 0 auto;
     position: relative;
@@ -51,7 +51,7 @@ body {
     flex-direction: column;
 }
 
-#button {
+.button {
     background-color: #FF494B;
     border: none;
     border-radius: 100%;
@@ -64,7 +64,7 @@ body {
     transition: all 100ms ease-in-out;
 }
 
-#bg1 {
+.bg1 {
     width: 390px;
     height: 390px;
     border-radius: 100%;
@@ -76,7 +76,7 @@ body {
     transition: all 100ms ease-in-out;
 }
 
-.dark-bg2 {
+/* .dark-bg2 {
     width: 430px;
     height: 430px;
     border-radius: 100%;
@@ -86,9 +86,9 @@ body {
     position: absolute;
     z-index: -999;
     transition: all 250ms ease-in;
-}
+} */
 
-.light-bg2 {
+.bg2 {
     width: 430px;
     height: 430px;
     border-radius: 100%;
@@ -100,7 +100,7 @@ body {
     transition: all 250ms ease-in;
 }
 
-#button:hover {
+.button:hover {
     cursor: pointer;
 }
 
@@ -108,17 +108,17 @@ body {
     transform: translateY(25px);
 }
 
-#button:hover span{
+.button:hover span{
     color: rgba(0, 0, 0, 0.6);
 }
 
-#button:focus{
+.button:focus{
     outline: thin dotted;
     outline: 0px auto -webkit-focus-ring-color;
     outline-offset: 0px;
 }
 
-#button span {
+.button span {
     font-size: 90px;
     font-weight: 700;
     color: rgba(0, 0, 0, 0.45);
@@ -127,25 +127,22 @@ body {
     transition: 200ms ease-in;
 }
 
-#mode {
+.mode {
     border: none;
     position: fixed;
     width: 70px;
     height: 70px;
     left: 2%;
     top: 2%;
+    background: url('../media/moon.png');
     background-size: contain;
     background-repeat: no-repeat;
     transition: 120ms ease-in;
 }
 
-#mode:hover {
+.mode:hover {
     transform: scale(1.03);
     cursor: pointer;
-}
-
-.light-mode {
-    background: url('../media/moon.png');
 }
 
 .dark-mode {
@@ -171,32 +168,29 @@ body {
     color: #c5c0ac;
 }
 
-#settings {
+.settings {
     position: fixed;
     right: 2%;
     border: none;
     top: 2%;
     width: 70px;
     height: 70px;
+    background: url('../media/light-settings.png');
     background-size: cover;
     background-repeat: no-repeat;
     transition: 200ms ease-in;
 }
 
-#settings:hover {
+.settings:hover {
     transform: scale(1.03);
     cursor: pointer;
-}
-
-.light-settings {
-    background: url('../media/light-settings.png');
 }
 
 .dark-settings {
     background: url('../media/dark-settings.png');
 }
 
-#menu {
+.menu {
     position: absolute;
     align-self: center;
     display: flex;
@@ -286,13 +280,13 @@ body {
     transform: scale(1.1);
 }
 
-#back {
+.back {
     font-size: 26px;
     font-weight: 700;
     transition: 150ms;
 }
 
-#back:hover {
+.back:hover {
     transform: scale(1.05);
     cursor: pointer;
 }
@@ -310,7 +304,7 @@ body {
         height: 300px;
     }
 
-    #bg1 {
+    .bg1 {
         margin: 100px auto 0px auto;
         width: 300px;
         height: 300px;
