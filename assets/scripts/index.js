@@ -8,7 +8,6 @@ const audio2 = new Audio('assets/media/reset.mp3');
 
 const body = document.querySelector("body");
 const bg2 = document.querySelector(".bg2");
-const bg1 = document.querySelector(".bg1");
 const mode = document.querySelector(".mode");
 const credits = document.querySelector("#credits");
 const link = document.querySelector("#link");
@@ -101,28 +100,18 @@ function buttonContinue() {
 const settings = document.querySelector(".settings");
 const back = document.querySelector(".back");
 const menu = document.querySelector(".menu");
-const itens = document.getElementById("itens");
-const label = document.getElementById("label");
-const inputs = document.getElementById("inputs");
 
 settings.addEventListener("click", openMenu);
-back.addEventListener("click", closeMenu);
+back.addEventListener("click", openMenu);
 
 function openMenu(){
-    menu.classList.add("open");
-    menu.classList.remove("closed");
-}
-
-function closeMenu(){
-    menu.classList.add("closed");
-    menu.classList.remove("open");
+    menu.classList.toggle("open");
+    menu.classList.toggle("closed");
 }
 
 /* ---------------------------------------- Cores do Botão ----------------------------------------*/
-
 const colors = Array.from(document.querySelectorAll(".color"));
-
-console.log(colors);
+const bg1 = document.querySelector(".bg1");
 
 const presets = [
     {
